@@ -1,4 +1,6 @@
 import React from 'react'
+import './css/Course.css';
+
 
 function Course({course}) {
 
@@ -6,13 +8,12 @@ function Course({course}) {
   return (
     <div className='course'>
 
-        <div>
-            <img src={image} width={250} height={200}/>
-            <h4>{title}</h4>
-            <h5>{description}</h5>
-            <h3>{price}</h3>
-            <a href={link}>Watch it the trailer!</a>
-        </div>
+            <img src={image} width={300} height={180}/>
+            <h4 className='courseTitle'>{title}</h4>
+            <p className='courseDesc'>{description}</p>
+            <h3 className='coursePrice'>$ {price}</h3>
+            <div className='courseLink'><a href={link} style={{textDecoration: 'none'}}>Watch it the trailer!</a></div>
+
     </div>
   )
 }
